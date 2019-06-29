@@ -12,13 +12,13 @@ Open http://localhost:8080 in your favourite browser.
 #### continuous build
 Start this in a separate shell and enjoy coding.
 
-    ./gradlew -t build
+    ./gradlew -x test -t build
     
 Hint: There is also a live reload server listening in debug mode. 
 
 ### production
 
-    ./gradlew -P release clean bootJar
+    ./gradlew -P release clean test bootJar
     java -jar build/libs/minimalrest-helloworld.jar
     
     
