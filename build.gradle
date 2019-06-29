@@ -24,4 +24,8 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-dependencies:2.1.6.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    implementation 'org.molkex.spring:minimalrest:0.1.0.RELEASE'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
