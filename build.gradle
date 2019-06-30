@@ -29,3 +29,8 @@ dependencies {
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
+task buildSwaggerClient(type:Exec, dependsOn: 'bootJar') {
+    commandLine('java', '-Dminimalrest.swagger.generate', '-jar',
+            'build/libs/minimalrest-helloworld-'+version+'.jar')
+}
