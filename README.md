@@ -27,4 +27,9 @@ Hint: On windows the client installer needs to be enabled. Take a look into reso
 
     ./gradlew -P release clean test bootJar
     java -jar build/libs/minimalrest-helloworld.jar
+
+#### docker
+
+    ./gradlew -P release clean test buildDockerImage
+    docker run minimalrest/helloworld
     

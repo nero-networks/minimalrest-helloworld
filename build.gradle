@@ -34,3 +34,7 @@ task buildSwaggerClient(type:Exec, dependsOn: 'bootJar') {
     commandLine('java', '-Dminimalrest.swagger.generate', '-jar',
             'build/libs/minimalrest-helloworld-'+version+'.jar')
 }
+
+task buildDockerImage(type:Exec, dependsOn: 'bootJar') {
+    commandLine('docker', 'build', '-t', 'minimalrest/helloworld', '.')
+}
